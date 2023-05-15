@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "PetInfoGuide",
+    "name": "Ping",
     "slug": "PetInfoGuide",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/pingIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/pingIcon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/pingIcon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.scyp.PetInfoGuide"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "53ff0ecb-d6f9-4ab7-b505-23f9098b29f8"
+      }
     }
   }
 }

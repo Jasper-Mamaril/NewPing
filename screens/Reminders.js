@@ -220,10 +220,10 @@ const styles = StyleSheet.create({
   },
   timeContainer: {
     position: 'absolute',
-    top: 125,
+    top: "17%",
   },
   time: {
-    fontSize: 64,
+    fontSize: 44,
     color: 'white',
     fontWeight: 'bold',
   },

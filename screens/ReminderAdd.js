@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {DateTimePicker, DateTimePickerAndroid} from '@react-native-community/datetimepicker';
 // import SelectDropdown from 'react-native-select-dropdown';
 import { MultipleSelectList, SelectList } from 'react-native-dropdown-select-list';
-
+// this is commit 2
 import Reminders from './Reminders';
 
 import * as Device from 'expo-device';

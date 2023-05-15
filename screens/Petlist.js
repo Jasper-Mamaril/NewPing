@@ -69,7 +69,7 @@ function PetlistScreen({navigation}) {
         setPets(response.data.payload);
         console.log(pets)
         fetchPets();
-
+        alert("Pet Deleted!");
       } else {
         throw new Error("An error has occurred");
       }
@@ -228,13 +228,13 @@ const styles = StyleSheet.create({
   scrollView: {
     width: '100%',
     marginTop: 15,
-    paddingBottom: 40,
+    paddingBottom: 20,
   },
   listingContainer: {
     alignItems: 'center',
   },
   wholeList: {
-    paddingBottom: 40,
+    paddingBottom: 20,
   },
   editIcon: {
     width: 25,

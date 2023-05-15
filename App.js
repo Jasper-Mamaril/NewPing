@@ -1,12 +1,13 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, ScrollView } from 'react-native';
 
 import LoginScreen from './forms/Login';
 
 export default function App() {
   return (
-    <LoginScreen/>
+  
+      <LoginScreen/>
+
   );
 }
 

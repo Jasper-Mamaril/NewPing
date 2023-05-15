@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -11,9 +12,6 @@ import NavController from '../components/NavController';
 import SignupScreen from '../forms/Signup';
 
 function LoginScreen({navigation}) {
-
-
-
     const [username, onChangeUsername] = React.useState('');
     const [password, onChangePass] = React.useState('');
 
@@ -30,8 +28,8 @@ function LoginScreen({navigation}) {
         if (response.status === 200) {
           console.log(response.data)
           // console.log(response.data.payload.id);
-          // setUsername('');
-          // setPassword('');
+          onChangeUsername('');
+          onChangePass('');
           // return navigation.navigate(ROUTES.LOGIN);
           // storeUserID(response.data.payload.id);
   
@@ -48,45 +46,51 @@ function LoginScreen({navigation}) {
 
     return (
       <View style={styles.container}>
+          <StatusBar translucent={true} />
           <Image style={styles.circleDesign1} source={require('../assets/circleDesign1.png')} />
           <Image style={styles.circleDesign2} source={require('../assets/circleDesign2.png')} />
         <View style={styles.iconContainer}>
           <Image style={styles.loginIcon} source={require('../assets/loginPic.png')} />
         </View>
           <View style={styles.card}>
-            <ScrollView style={styles.scrollview}>
-          <View name={'inputFields'} style={styles.inputFieldSection}>
-                  <KeyboardAvoidingView enabled
-                      style={styles.keyboardView}
-                      behavior="padding">
-                    <View style={styles.inputFieldContainer}>
-                        <View style={styles.inputField}>
-                          <TextInput
-                            style={styles.input}
-                            onChangeText={onChangeUsername}
-                            value={username}
-                            placeholder="Username"/>
-                        </View>
-                    </View>
-                  </KeyboardAvoidingView>
-          </View>
+          
+            <ScrollView style={styles.scrollview}
+            showsVerticalScrollIndicator={false}>
+                    <KeyboardAvoidingView enabled
+                    style={styles.keyboardView}
+                    // behavior="padding"
+                    >
+                <View name={'inputFields'} style={styles.inputFieldSection}>
+                      
+                          <View style={styles.inputFieldContainer}>
+                              <View style={styles.inputField}>
+                                <TextInput
+                                  style={styles.input}
+                                  onChangeText={onChangeUsername}
+                                  value={username}
+                                  placeholder="Username"/>
+                              </View>
+                          </View>
+                        
+                </View>
 
-          <View name={'inputFields'} style={styles.inputFieldSection}>
-                  <KeyboardAvoidingView enabled
-                      style={styles.keyboardView}
-                      behavior="padding">
-                    <View style={styles.inputFieldContainer}>
-                        <View style={styles.inputField}>
-                          <TextInput
-                            style={styles.input}
-                            secureTextEntry={true}
-                            onChangeText={onChangePass}
-                            value={password}
-                            placeholder="Password"/>
-                        </View>
-                    </View>
-                  </KeyboardAvoidingView>
-          </View>
+                <View name={'inputFields'} style={styles.inputFieldSection}>
+                        {/* <KeyboardAvoidingView enabled
+                            style={styles.keyboardView}
+                            behavior="padding"> */}
+                          <View style={styles.inputFieldContainer}>
+                              <View style={styles.inputField}>
+                                <TextInput
+                                  style={styles.input}
+                                  secureTextEntry={true}
+                                  onChangeText={onChangePass}
+                                  value={password}
+                                  placeholder="Password"/>
+                              </View>
+                          </View>
+
+                        {/* </KeyboardAvoidingView> */}
+                </View>
             <View style={styles.loginButtonContainer}>
               <TouchableOpacity style={styles.loginButton} onPress={onSubmitFormHandler}>
                 <Text style={styles.buttonTxt}>LOGIN</Text>
@@ -104,8 +108,9 @@ function LoginScreen({navigation}) {
                 </View>
             </View>
           
-
+            </KeyboardAvoidingView>
             </ScrollView>
+           
           </View>
         
       </View>
@@ -138,6 +143,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EAF2FF',
     alignItems: 'center',
     justifyContent: 'center',
+    // position: 'absolute'
   },
   paragraph: {
     fontSize: 12,
@@ -161,7 +167,7 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     position: 'absolute',
-    top: 140,
+    top: 110,
   },
   loginIcon: {
     width: 200,
@@ -169,7 +175,7 @@ const styles = StyleSheet.create({
   },
   card: {
     position: 'absolute',
-    top: 390,
+    top: 370,
     width: '80%',
   },
   inputFieldSection: {

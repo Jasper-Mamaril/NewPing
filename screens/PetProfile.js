@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, SafeAreaView, ScrollView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, ScrollView } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import SafeAreaView from 'react-native-safe-area-view';
 // import EditPet from '../screens/EditPet';
 const PetProfileScreen = ({navigation, route}) => {
 // function PetProfileScreen({navigation, route}) {
@@ -11,20 +11,19 @@ const PetProfileScreen = ({navigation, route}) => {
 const petDetail = route.params;
 console.log(petDetail);
 // console.log(route);
-
-
   return (
     <View style={styles.container}>
       <Image style={styles.bgImage} source={require('../assets/bgImage.jpg')} />
-        <View style={styles.card}>
-
-        <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-          <View style={styles.infoContainer}>
             <View style={styles.petname}>
               <Text style={styles.petnameTxt}>
                 {petDetail.petname}
               </Text>
             </View>
+        <View style={styles.card}>
+
+        <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+          <View style={styles.infoContainer}>
+           
             <View style={styles.flexBox}>
               {/* <View style={styles.infoSection}>
               <TouchableOpacity style={styles.ageBox}>
@@ -46,7 +45,7 @@ console.log(petDetail);
 
               <View style={styles.infoSection}>
               <TouchableOpacity style={styles.ageBox}>
-                <Text style={styles.outputText}> Wt. </Text>
+                <Text style={styles.woutputText}> Wt.(kg) </Text>
                 <View >
                 <Text style={styles.weightOutputTxt}> {petDetail.weight}</Text>
                 </View>
@@ -177,10 +176,14 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   petname: {
-    marginTop: 40,
+    // marginTop: 40,
+    position: 'absolute',
+    top: 120,
   },
   petnameTxt: {
-    fontSize: 32,
+    fontSize: 64,
+    fontWeight: "500",
+    color: "#fff",
   },
   ageBox: {
     backgroundColor: '#6B6FC8',
@@ -194,6 +197,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 24,
   },
+  woutputText: {
+    color: 'white',
+    fontSize: 18,
+  },
   ageOutputTxt: {
     fontSize: 46,
     color: 'white',
@@ -205,6 +212,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'white',
     marginLeft: -10,
+    marginTop: 10,
   },
   iconPosition: {
     justifyContent: 'center',
@@ -272,8 +280,10 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width: '100%',
+ 
   },
   infoContainer: {
     alignItems: 'center',
+    marginBottom: 40,
   }
 });

@@ -10,8 +10,6 @@ import Petlist from '../screens/Petlist';
 import Reminders from '../screens/Reminders';
 import Settings from '../screens/Settings';
 
-
-
 export default function NavController() {
   const Tab = createBottomTabNavigator();
   return (
