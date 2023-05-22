@@ -18,13 +18,8 @@ function AboutScreen({navigation}) {
 
           <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
           <View style={styles.reminderListContainer}>
-            <Text style={styles.tempoTxt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-              laborum.</Text>
+            <Text style={styles.tempoTxt}>Ping (Pet Information Guide) is a Pet information and reminder app that helps pet owners keep better track of their pets.</Text>
+            <Text style={styles.tempoTxt}>Ping is designed to manage information of your pets and schedule reminders for medication, meal, bath, play and exercise time daily keeping consistent love, bond and care of your pets.</Text>
           </View>
           </ScrollView>
       </View>     

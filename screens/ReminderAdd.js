@@ -30,9 +30,9 @@ Notifications.setNotificationHandler({
   // }
 
 import axios from 'axios';
-const baseURL = 'http://192.168.1.26/Ping/restAPI/';
-
-import dayjs from 'dayjs';
+// const baseURL = 'http://192.168.1.26/Ping/restAPI/';
+import {baseURL} from '../components/Url';
+// import dayjs from 'dayjs';
 // import Reminders from '../screens/Reminders';
 
 const label = [

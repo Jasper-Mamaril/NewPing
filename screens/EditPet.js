@@ -6,9 +6,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MultipleSelectList, SelectList } from 'react-native-dropdown-select-list';
+import {baseURL} from '../components/Url';
 
 import axios from 'axios';
-const baseURL = 'http://192.168.1.26/Ping/restAPI/';
+// const baseURL = 'http://192.168.1.26/Ping/restAPI/';
+
 
 // function EditPetInformation({navigation, route}) {
 const EditPetInformation = ({navigation, route}) => {

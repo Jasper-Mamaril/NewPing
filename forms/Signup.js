@@ -1,10 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, KeyboardAvoidingView, ScrollView } from 'react-native';
-
+import {baseURL} from '../components/Url';
 import axios from 'axios';
 
-const baseURL = 'http://192.168.1.26/Ping/restAPI/';
+// const baseURL = 'http://192.168.1.26/Ping/restAPI/';
 
 // import SignupScreen from './forms/Signup';
 

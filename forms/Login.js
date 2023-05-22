@@ -3,10 +3,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import {baseURL} from '../components/Url';
 import axios from 'axios';
 
-const baseURL = 'http://192.168.1.26/Ping/restAPI/';
+// const baseURL = 'http://192.168.1.26/Ping/restAPI/';
 
 import NavController from '../components/NavController';
 import SignupScreen from '../forms/Signup';

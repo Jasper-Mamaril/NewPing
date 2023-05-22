@@ -8,9 +8,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useFocusEffect } from "@react-navigation/native";
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications';
-
+import {baseURL} from '../components/Url';
 import axios from 'axios';
-const baseURL = 'http://192.168.1.26/Ping/restAPI/';
+// const baseURL = 'http://192.168.1.26/Ping/restAPI/';
 
 import dayjs from 'dayjs';
 

@@ -36,11 +36,11 @@ const day = [
   {key:'1', value:'Yes'},
   {key:'2', value:'No'},
 ];
-const list = [
-  {key:'1', value:'Kim'},
-  {key:'2', value:'Ant'},
-  {key:'3', value:'Jmie'},
-];
+// const list = [
+//   {key:'1', value:'Kim'},
+//   {key:'2', value:'Ant'},
+//   {key:'3', value:'Jmie'},
+// ];
 
 
 
